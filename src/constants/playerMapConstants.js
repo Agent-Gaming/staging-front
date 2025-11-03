@@ -3,10 +3,10 @@
 
 // Prédicats communs
 export const COMMON_IDS = {
-  GAMES_ID: "0x5dc0a2335c12343d8e0f71b62a73fbf70d06fcbaf647f57d82a189873ad90da3",
-  FOLLOWS: "0x8f9b5dc2e7b8bd12f6762c839830672f1d13c08e72b5f09f194cafc153f2df8a", // prédicat --> follows
-  IS: "0x2af261bce70c2fc3a1abf882e3e89b23066fcd150bfda27fab69f9f55ed2d9d0",  // prédicat --> is
-  IS_PLAYER_OF: "0x05f1707d8cb50571d01021f09a664826aa1be2ff43504c0cca55eef87142f84f",  // prédicat --> is player of
+  GAMES_ID: "0x15fd51c3248baf65414b97a52ff4302e653bd4f765e6784fd5eb4906ea322390",
+  FOLLOWS: "0xffd07650dc7ab341184362461ebf52144bf8bcac5a19ef714571de15f1319260", // prédicat --> follows
+  IS: "0xdd4320a03fcd85ed6ac29f3171208f05418324d6943f1fac5d3c23cc1ce10eb3",  // prédicat --> is
+  IS_PLAYER_OF: "0x6bd2557fa101349b1adab869c7f14bdcb5dce3ae0bc722bee3ae183a544faa81",  // prédicat --> is player of
 };
 
 // Types de triples pour les joueurs
@@ -17,15 +17,15 @@ export const PLAYER_TRIPLE_TYPES = {
   },
   PLAYER_QUALITY_1: {
     predicateId: COMMON_IDS.IS, // predicat --> is 
-    objectId: "0xc9559c712c264e5f94ce450ed9473c451b6fd01ab6a436a726fbae767cd67b9c" // object --> fairplay !!!
+    objectId: "0xe8c70540064241818928054f9d655b79a9fc06fad93967db766347d9ed678795" // object --> fairplay !!!
   },
   PLAYER_QUALITY_2: {
     predicateId: COMMON_IDS.IS, // predicat --> is 
-    objectId: "0x56d28a901a7f2617247f1663b0c25c77ba6403a8141bac43b1e94eb32a2de941" // object --> strong boss !!!
+    objectId: "0x0b5b1eecbe6c655584f57c15b1fd0a8fbec0ba39bbc1f253824b2075739c3fe1" // object --> strong boss !!!
   },
   PLAYER_QUALITY_3: {
     predicateId: COMMON_IDS.IS, // predicat --> is 
-    objectId: "0xc8433466cda62c0e8bb4fc5433f3faa51949072d6c7b0df50a595c95fb97f1bb" // object --> strong fighter !!!
+    objectId: "0x48e31f7beaec9a71b62de49865ee2ba664c72c6860f7802d2174d003e635ff7d" // object --> strong fighter !!!
   },
   PLAYER_GUILD: {
     predicateId: COMMON_IDS.IS_PLAYER_OF, // predicat --> is player of !!!
@@ -35,13 +35,13 @@ export const PLAYER_TRIPLE_TYPES = {
 
 // Liste des guildes officielles du jeu
 export const OFFICIAL_GUILDS = [
-  { id: "0x4320ae619f6a9c9b79ee8e2a9415585aff1c287f0b72b08c049cf7a5780eb08d", name: "The Alchemists" }, // id --> The Alchemists !!!
-  { id: "0x12d4b4425dcfeaf46af6543e8de0133f22f768a69d56a3aa28662ecb06aa9ca1", name: "Big Time Warriors" }, // id --> Big Time Warriors !!!
-  { id: "0xd9e1d54c0cb904c23e04caea94f9d0dae00874ec18849ca74a832e94c6de01fa", name: "The NEST" }, // id --> The NEST !!!
-  { id: "0xd473ceacf850609ff8881c398e85e59aadbc315588ca78182313cc1af05a2800", name: "Clock Work Gamers" }, // id --> Clock Work Gamers !!!
-  { id: "0x14511bc4065a1e7d67ba7d50d4706a8899a148a2e68b55213794c14e347acaa", name: "Vast Impact Gaming" }, // id --> Vast Impact Gaming !!!
-  { id: "0x93815368a0d207e11be12da396d51dea4e3f8e637fe49f696648feb451f6f9c7", name: "Kraken Gaming" }, // id --> Kraken Gaming !!!
-  { id: "0x508dee963f045411bd0bf4ab9433f40b72ca4270eb0f31222f299211cffbb0bc", name: "FAM" } // id --> FAM
+  { id: "0xc183c41276643c4702a171d37cf9a20baa5de5e25caac66c39830b0fca2ba770", name: "The Alchemists" }, // id --> The Alchemists
+  { id: "0xb110c4aa1b84b23e8f5e101f664c653812830c0f6a2d795a548160d36d108456", name: "Big Time Warriors" }, // id --> Big TIme Warriors (note: label has typo in DB)
+  { id: "0x9bf71e4674afe84dac6a963afd0266007c7353f3c9fa12864754d3f8eeb9ce47", name: "The NEST" }, // id --> The NEST
+  { id: "0x41c736b542bdac2569f85106f674a0f532d1128c576ee533c316ddd6f7e34c25", name: "Clock Work Gamers" }, // id --> Clock Work Gamers
+  { id: "0xe27adc56828d19a66cb92a1d9d4caeb04d0a295c473562fcc2703e92b1a44f1c", name: "Vast Impact Gaming" }, // id --> Vast Impact Gaming
+  { id: "0x4ba717c7f309c98d2ba72c8412960af16872def8e8462f69da2e340762a01627", name: "Kraken Gaming" }, // id --> Kraken Gaming
+  { id: "0xfec84b336ffe9c138d4f9d8203ff6453cbc9413927be3ac36fa656b6f940ef88", name: "FAM" } // id --> FAM
 ];
 
 // List of predefined claim IDs for voting
@@ -65,10 +65,10 @@ export const PREDEFINED_CLAIM_IDS = [
   "0xb17dfa387c586717567c5e2c27edabd1f2cfbd46807d45046a3a2a1f29f51280", // high stakes - is - solo mod
   "0x1e31fc307251b307c10cbe4aebf18dff85ba196f4429a4183d546fde68eedeba", // high stakes - is - team mode
   "0x5b5c9fa73f6be933c0580d1a25ca590e5d97c0cc6e92027699f0c7b5b660b8fb", // matchmaking - is - balanced
-  "0x27191de92fe0308355319ec8f2359e5ce85123bd243bf7ffa6eb8028347b3eab", // toxic - is map of - bossfights
-  "0x9df847b39391899840d7973d9718d8caef5c5467dde9374a96d1f71727bae7c4", // toxic river - is - balanced
-  "0x561a2c3e4359c8ed1c468aef27691e8e48b4424344a38c7693b9127b1911efc9", // toxic river - is - fun
-  "0x6d7e52c5e80bf6c2873a21cb7013ba0655dc0458c77f2c0e7446c49efdbd0033", // toxic river - is - immersive
+  "0x60559a1bddb65815a0c8d9af0447fe667131f1982c88d77e782d58c2de84febf", // toxic - is map of - bossfights
+  "0x9f74e32015aedeab16096eef3dd581e4857f9395eadcd3977a8de327fcccfd5b", // toxic river - is - balanced
+  "0x7ea95d79cf04cffd534250ad61c03768d03a2efc209c997b2a35c7152dcff156", // toxic river - is - fun
+  "0x0e2c371bf49a57f2cfa01f2268c010e5f7cfdfd14b706f2a1cb0a2957add3abd", // toxic river - is - immersive
   "0xef6da30d2734115c4707a178f33e927d3ce62e7744cf86f54019c4780ed4c36c", // award - is - balanced
   "0xb21f02971c2ebaa877c303cb026bc27309f7505634aff8bac596c7d7ed039146", // award - is - fun
   "0xc8f8c5e7df4e7e8e19089011b0d7521c0043a86384f349ecf608a0e1ca1ebb08", // award - is - immersive
@@ -91,3 +91,4 @@ export const CUSTOM_PLAYER_MAP_CONSTANTS = {
   PREDEFINED_CLAIM_IDS,
   PINATA_CONFIG // ← IMPORTANT : Ajouter PINATA_CONFIG (sécurisé)
 };
+
