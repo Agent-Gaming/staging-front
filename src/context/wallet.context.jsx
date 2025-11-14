@@ -7,40 +7,40 @@ import { http } from "viem";
 
 const queryClient = new QueryClient();
 
-// Configuration pour Intuition Testnet
-const intuitionTestnetChain = {
-  id: 13579,
-  name: "Intuition Testnet",
-  network: "intuition-testnet",
+// Configuration pour Intuition Mainnet
+const intuitionMainnetChain = {
+  id: 1155,
+  name: "Intuition Mainnet",
+  network: "intuition-mainnet",
   nativeCurrency: {
     decimals: 18,
-    name: "tTRUST",
-    symbol: "tTRUST",
+    name: "TRUST",
+    symbol: "TRUST",
   },
   rpcUrls: {
     default: {
-      http: ["https://testnet.rpc.intuition.systems"],
+      http: ["https://rpc.intuition.systems"],
     },
     public: {
-      http: ["https://testnet.rpc.intuition.systems"],
+      http: ["https://rpc.intuition.systems"],
     },
   },
   blockExplorers: {
     default: {
-      name: "Intuition Testnet Explorer",
-      url: "https://intuition-testnet.explorer.caldera.xyz",
+      name: "Intuition Mainnet Explorer",
+      url: "https://explorer.intuition.systems",
     },
   },
-  testnet: true,
+  testnet: false,
 };
 
 const wagmiConfig = createConfig({
-  chains: [mainnet, sepolia, base, intuitionTestnetChain],
+  chains: [mainnet, sepolia, base, intuitionMainnetChain],
   transports: {
     [mainnet.id]: http(),
     [sepolia.id]: http(),
     [base.id]: http(),
-    [intuitionTestnetChain.id]: http(),
+    [intuitionMainnetChain.id]: http(),
   },
 });
 
